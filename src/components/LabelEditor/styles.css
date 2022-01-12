@@ -1,0 +1,12 @@
+.editProps__font {
+  width: 75%;
+}
+
+.editProp__layering--withoutFont {
+  margin: 0.5rem auto 0 auto;
+}
+
+.editProps__align {
+  text-align: center;
+  margin-bottom: 1rem;
+}

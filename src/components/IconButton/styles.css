@@ -1,0 +1,50 @@
+/* Styling the button */
+.btn__container {
+  font: inherit;
+  display: flex;
+  align-items: center;
+  width: 25%;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  color: inherit;
+  margin: 0 0.5rem;
+}
+
+/* Styling the navbar's buttons */
+.btn__container--navbar {
+  flex-direction: column;
+}
+
+.btn__container--navbar:active {
+  background-color: #5a6268;
+}
+
+/*Styling the toolbar's buttons */
+
+.btn__container--toolbar {
+  width: 90%;
+}
+
+.btn__container--toolbar:active,
+.btn__container--toolbar:hover {
+  background-color: #0069d9;
+}
+
+.btn__toolbar--clear,
+.btn__toolbar--clear:active,
+.btn__toolbar--clear:hover,
+.btn__toolbar--clear:focus {
+  background-color: #c82333;
+}
+
+/*Styling the icon */
+
+.icon {
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.icon--toolbar {
+  margin-right: 1rem;
+}

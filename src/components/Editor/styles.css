@@ -1,0 +1,36 @@
+.editor__container {
+  /* width: 26rem; */
+  height: 7rem;
+}
+
+.editor__field {
+  background-color: white;
+}
+
+.editor__scrollbar {
+  height: calc(100vh - 120px - 10rem);
+  overflow: auto;
+}
+
+.editor__scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.35rem;
+}
+
+.editor__scrollbar::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.editor__scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 0.35rem;
+  border: 1px solid #cbd3da;
+}
+.editor__scrollbar::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.editor__border {
+  border: 1px dashed blue;
+}

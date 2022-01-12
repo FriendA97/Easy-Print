@@ -1,0 +1,55 @@
+.typeSettings__title {
+  font-weight: 700;
+}
+
+.typeSettings__title--horizontal {
+  font-weight: 700;
+}
+
+.typeSettings__text {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.typeSettings__position {
+  margin-top: 1rem;
+}
+
+.typeSettings__inputs {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.typeSettings__inputs--value {
+  width: 40%;
+  margin-right: 2rem;
+}
+
+.typeSettings__dropdown {
+  margin-left: 3rem;
+}
+
+.typeSettings__toggle {
+  color: inherit;
+  background-color: white;
+  padding-right: 1rem;
+  width: 100%;
+  overflow: auto;
+}
+
+.typeSettings__customText {
+  width: 50%;
+}
+
+.typeSettings__prompt {
+  width: 80%;
+}
+
+.prompt__text {
+ }
+
+.typeSettings__select--inline {
+
+}

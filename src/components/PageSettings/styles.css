@@ -1,0 +1,26 @@
+.pageSettings__title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.pageSettings__items {
+  display: flex;
+}
+
+.pageSettings__size {
+  width: 30%;
+}
+
+.pageSettings__margin {
+  width: 50%;
+}
+
+.pageSettings__orientation {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageSettings__margin > div {
+  display: flex;
+}

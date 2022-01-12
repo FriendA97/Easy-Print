@@ -1,0 +1,41 @@
+.container {
+  color: inherit;
+}
+
+.formGroup__container--horizontal {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formGroup__container--text {
+  justify-content: flex-start;
+}
+
+.formGroup__input {
+  outline: none;
+  color: inherit;
+  position: static;
+  margin-left: 0;
+}
+
+.formGroup__input:active,
+.formGroup__input:hover,
+.formGroup__input:focus {
+  color: black;
+}
+
+.formGroup__input--sm {
+  width: 30%;
+  outline: none;
+  color: inherit;
+}
+
+.formGroup__input--md {
+  width: 90%;
+  outline: none;
+  color: inherit;
+}
+
+.formGroup__container--vertical {
+  display: block;
+}

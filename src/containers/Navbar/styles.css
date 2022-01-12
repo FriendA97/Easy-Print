@@ -1,0 +1,18 @@
+.nav__container {
+  background-color: #2d3e50;
+  width: 100%;
+  color: white;
+}
+
+.nav__splitter {
+  border-right: 2px white solid;
+}
+
+.nav__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__pageSettings {
+  display: block;
+}

@@ -1,0 +1,74 @@
+.layout__container {
+  background-color: #a9a9a9;
+  margin: 0;
+  height: 100%;
+}
+
+.labelEditor__container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.edit__header {
+  flex-direction: column;
+  margin: 0;
+  margin-left: 1.5rem;
+}
+
+.main__container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main__col {
+  padding: 0;
+}
+
+.main__btns {
+  display: flex;
+}
+
+.main__edit,
+.main__view {
+  padding: 0.5rem 0;
+  margin: 1rem 0 0 0.2rem;
+}
+
+.main__view {
+  overflow: hidden;
+}
+
+.main__viewCol {
+  padding-left: 0;
+}
+
+.labelSettings__container {
+  padding-left: 0;
+}
+
+.currentItem__active {
+  min-width: 20%;
+}
+
+.currentItem__title {
+  font-weight: 700;
+}
+
+.preview__container {
+  width: 22rem;
+  height: 20rem;
+  padding: 0 1rem;
+}
+
+.m-0{
+  margin: 0 !important;
+}
+
+.ml-8{
+  margin-left: 0.5rem !important;
+}
+
+.mr-8{
+  margin-right: 0.5rem !important;
+}

@@ -1,0 +1,35 @@
+.labelItem__title {
+  font-weight: 700;
+}
+
+.labelItem__title--horizontal {
+  width: 70%;
+  font-weight: 700;
+}
+
+.labelItem__text {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.labelItem__position {
+  margin-top: 1rem;
+}
+
+.labelItem__inputs {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.labelItem__inputs--line {
+  width: 50%;
+}
+
+.labelItem__dropdown {
+  margin-left: 2.5rem;
+}
+
+.labelItem__toggle {
+  color: inherit;
+  background-color: white;
+}
