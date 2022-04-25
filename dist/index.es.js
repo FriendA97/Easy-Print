@@ -6,7 +6,7 @@ import { createUndoMiddleware, undoHistoryReducer, actions as actions$2 } from '
 import { connect, Provider } from 'react-redux';
 import { withTranslation, I18nextProvider } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { faPrint, faFile, faFolder, faSave, faPen, faQrcode, faBarcode, faMinus, faBold, faItalic, faUnderline, faPaintBrush, faCopy, faDownload, faFileImport } from '@fortawesome/free-solid-svg-icons';
+import { faPrint, faFile, faFolder, faSave, faPen, faQrcode, faBarcode, faMinus, faBold, faItalic, faUnderline, faPaintBrush, faCopy, faDownload, faFileImport, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Line, Transformer, Rect, Text, Image, Ellipse as Ellipse$1, Stage, Layer } from 'react-konva';
@@ -17843,7 +17843,7 @@ var middleware = applyMiddleware(logger, undoMiddleware);
 
 var store = createStore(reducer$2, middleware);
 
-var css_248z$1 = ".nav__container {\r\n  background-color: #2d3e50;\r\n  width: 100%;\r\n  color: white;\r\n}\r\n\r\n.nav__splitter {\r\n  border-right: 2px white solid;\r\n}\r\n\r\n.nav__btns {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.nav__pageSettings {\r\n  display: block;\r\n}\r\n";
+var css_248z$1 = ".nav__container {\n  background-color: #2d3e50;\n  width: 100%;\n  color: white;\n}\n\n.nav__splitter {\n  border-right: 2px white solid;\n}\n\n.nav__btns {\n  display: flex;\n  justify-content: space-between;\n}\n\n.nav__pageSettings {\n  display: block;\n}\n";
 styleInject(css_248z$1);
 
 var css_248z$2 = "/* Styling the button */\n.btn__container {\n  font: inherit;\n  display: flex;\n  align-items: center;\n  width: 25%;\n  background: transparent;\n  border: none;\n  padding: 0.5rem;\n  color: inherit;\n  margin: 0 0.5rem;\n}\n\n/* Styling the navbar's buttons */\n.btn__container--navbar {\n  flex-direction: column;\n}\n\n.btn__container--navbar:active {\n  background-color: #5a6268;\n}\n\n/*Styling the toolbar's buttons */\n\n.btn__container--toolbar {\n  width: 90%;\n}\n\n.btn__container--toolbar:active,\n.btn__container--toolbar:hover {\n  background-color: #0069d9;\n}\n\n.btn__toolbar--clear,\n.btn__toolbar--clear:active,\n.btn__toolbar--clear:hover,\n.btn__toolbar--clear:focus {\n  background-color: #c82333;\n}\n\n/*Styling the icon */\n\n.icon {\n  color: #ffffff;\n  margin-bottom: 0.2rem;\n}\n\n.icon--toolbar {\n  margin-right: 1rem;\n}\n";
@@ -17859,7 +17859,8 @@ var IconButton = function IconButton(props) {
       active = props.active,
       draggable = props.draggable,
       id = props.id,
-      onDragStart = props.onDragStart;
+      onDragStart = props.onDragStart,
+      spin = props.spin;
 
   var buttonStyle = classnames({
     btn__container: true,
@@ -17886,7 +17887,7 @@ var IconButton = function IconButton(props) {
     React.createElement(
       'span',
       { className: iconStyle },
-      icon && React.createElement(FontAwesomeIcon, { icon: '' + icon, size: iconSize })
+      icon && React.createElement(FontAwesomeIcon, { icon: '' + icon, size: iconSize, spin: spin })
     ),
     text
   );
@@ -17899,7 +17900,8 @@ IconButton.defaultProps = {
   onClick: function onClick() {},
   color: 'secondary',
   active: false,
-  draggable: false
+  draggable: false,
+  spin: false
 };
 
 IconButton.propTypes = {
@@ -17912,7 +17914,8 @@ IconButton.propTypes = {
   active: PropTypes.bool,
   draggable: PropTypes.bool,
   id: PropTypes.string,
-  onDragStart: PropTypes.func
+  onDragStart: PropTypes.func,
+  spin: PropTypes.bool
 };
 
 var css_248z$3 = ".pageSettings__title {\n  text-align: center;\n  font-weight: 600;\n  margin-bottom: 0;\n}\n\n.pageSettings__items {\n  display: flex;\n}\n\n.pageSettings__size {\n  width: 30%;\n}\n\n.pageSettings__margin {\n  width: 50%;\n}\n\n.pageSettings__orientation {\n  display: flex;\n  flex-direction: column;\n}\n\n.pageSettings__margin > div {\n  display: flex;\n}\n";
@@ -18433,7 +18436,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 var PageSettings$1 = withStyles(useStyles)(withTranslation('translations')(connect(mapStateToProps, mapDispatchToProps)(PageSettings)));
 
-var css_248z$5 = ".saveModal__input {\r\n  width: 50%;\r\n}\r\n";
+var css_248z$5 = ".saveModal__input {\n  width: 50%;\n}\n";
 styleInject(css_248z$5);
 
 var SaveModal = function SaveModal(props) {
@@ -18528,23 +18531,51 @@ var NavBar = function (_Component) {
     };
 
     _this.handleImport = function (event) {
+      var t = _this.props.t;
+
       var file = event.target.files[0];
       if (!file) {
         return;
       }
-      var reader = new FileReader();
+      if (file.name.endsWith('.ept')) {
+        var formData = new FormData();
 
-      reader.onload = function (e) {
-        _this.props.load(JSON.parse(e.target.result));
-        _this.inputFile.current.value = null;
-      };
-      reader.readAsText(file);
+        _this.setState({ converting: true });
+        formData.append('layout', file);
+        _this.props.axios.post('/convert/ep3_to_ep4', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }).then(function (rs) {
+          if (rs.status === 200) {
+            _this.props.load(rs.data);
+            _this.inputFile.current.value = null;
+          } else {
+            alert(t('error.unable_to_convert_template', 'Unable to convert the template'));
+            console.log(e);
+            _this.inputFile.current.value = null;
+          }
+
+          _this.setState({ converting: false });
+        }).catch(function () {
+          _this.setState({ converting: false });
+        });
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          _this.props.load(JSON.parse(e.target.result));
+          _this.inputFile.current.value = null;
+        };
+        reader.readAsText(file);
+      }
     };
 
     _this.state = {
       showModal: false,
       fileName: '',
-      saveType: ''
+      saveType: '',
+      converting: false
     };
     _this.saveToDB = _this.toggleSaveModal.bind(_this, 'DB');
     _this.saveToPC = _this.toggleSaveModal.bind(_this, 'PC');
@@ -18618,7 +18649,7 @@ var NavBar = function (_Component) {
                 }),
                 React.createElement('input', {
                   type: 'file',
-                  accept: '.json',
+                  accept: '.json;*.ept',
                   id: 'upload_input',
                   onChange: this.handleImport,
                   style: { display: 'none' },
@@ -18626,8 +18657,9 @@ var NavBar = function (_Component) {
                 }),
                 React.createElement(IconButton, {
                   inNavbar: true,
-                  icon: 'file-import',
-                  text: t('fn.file_import', 'Import'),
+                  icon: this.state.converting ? 'spinner' : 'file-import',
+                  text: this.state.converting ? t('lbl.converting', 'Converting...') : t('fn.file_import', 'Import'),
+                  spin: this.state.converting,
                   onClick: function onClick() {
                     return _this2.inputFile.current.click();
                   }
@@ -18660,6 +18692,7 @@ NavBar.propTypes = {
   handleSaveDB: PropTypes.func,
   showPreview: PropTypes.bool,
   openPreview: PropTypes.func,
+  axios: PropTypes.any,
   handleExportClick: PropTypes.func
 };
 
@@ -22405,7 +22438,7 @@ i18n.use(HttpApi).init({
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Add FontAwesomeIcon to the whole app
-library.add(faPrint, faFile, faFolder, faSave, faPen, faQrcode, faBarcode, faMinus, faBold, faItalic, faUnderline, faPaintBrush, faCopy, faDownload, faFileImport);
+library.add(faPrint, faFile, faFolder, faSave, faPen, faQrcode, faBarcode, faMinus, faBold, faItalic, faUnderline, faPaintBrush, faCopy, faDownload, faFileImport, faSpinner);
 
 var App = function (_Component) {
   inherits(App, _Component);
@@ -22466,7 +22499,8 @@ var App = function (_Component) {
                 showPreview: this.state.showPreview,
                 handleExportClick: this.handleExportClick,
                 handleSaveDB: this.props.handleSaveDB,
-                ref: this.stageRef
+                ref: this.stageRef,
+                axios: this.props.axios
               }),
               React.createElement(
                 Row,
@@ -22513,6 +22547,7 @@ var App = function (_Component) {
 
 App.propTypes = {
   handleSaveDB: PropTypes.func,
+  axios: PropTypes.any, // Axios library
   initialLayout: PropTypes.object,
   variableGroup: PropTypes.array, // Object containing actual variables to be shown on POS labels
   orderItem: PropTypes.object, // Object containing data for variables to be shown on preview
@@ -22523,7 +22558,8 @@ App.propTypes = {
 App.defaultProps = {
   handleSaveDB: function handleSaveDB() {
     return console.log('Add save func');
-  }
+  },
+  axios: null
 };
 
 var index = { EasyPrint: App };
