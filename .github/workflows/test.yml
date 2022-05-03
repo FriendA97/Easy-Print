@@ -22,5 +22,5 @@ jobs:
           npm run predeploy
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.EASY_PRINT_LIBRARY }}
 
