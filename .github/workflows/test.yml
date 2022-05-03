@@ -16,7 +16,7 @@ jobs:
           node-version: '10.x'
       - run: npm install
       - run: npm run build
-      - run: npm test
+      - run: npm run test
       - name: Deploy
         - run: npm run predeploy
         - run: npm deploy
