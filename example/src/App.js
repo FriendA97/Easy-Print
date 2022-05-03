@@ -69,6 +69,23 @@ const initial_layout = {
       fontSize: 12,
       fontFamily: 'Noto Sans',
     },
+    4: {
+      itemType: 'text',
+      text: '',
+      width: 50,
+      height: 20,
+      fontSize: 12,
+      fontFamily: 'Noto Sans',
+      customText: true,
+      color: '#FF6347',
+      layerRef: 'null',
+      prompt: 'Enter prompt',
+      rotation: 0,
+      x: 100,
+      y: 50,
+      id: 1,
+      name: 'text4',
+    },
   }, // to map items ids to items
   itemids: [0, 1, 2, 3], // to maintain order of items
   width: { pixel: 500, mm: 90 }, // width
