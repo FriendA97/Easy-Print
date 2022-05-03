@@ -10,10 +10,12 @@ export function computeGTINCheckDigit(code) {
   if (!/^\d{7,18}$/.test(code)) return null; //code must be digits only, 7-18 digits
 
   const digits = [...String(code).padStart(18, '0')];
-  const weights = Array(9).fill([1, 3]).flat();
+  const array = Array(9).fill([1, 3]);
+  const weights = [].concat(...array);
   const reducer = (accumulator, weight, i) => accumulator + weight * digits[i];
   const sum = weights.reduce(reducer, 0);
 
   const remainder = sum % 10;
   return String(remainder ? 10 - remainder : 0);
 }
+
