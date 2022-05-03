@@ -19,11 +19,11 @@ jobs:
           npm run test
       - uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
-          token: '${{ secrets.GITHUB_TOKEN }}'
+          token: '${{ secrets.Easyprint }}'
       - name: Deploy
         run: |
           npm run predeploy
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.Easyprint }}
 
