@@ -17,13 +17,11 @@ jobs:
           npm install
           npm run build
           npm run test
-      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
-        with:
-          token: '${{ secrets.Easyprint }}'
       - name: Deploy
-        run: |
-          npm run predeploy
-          npm run deploy
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: gh-pages
+          build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.Easyprint }}
 
