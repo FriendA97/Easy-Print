@@ -1,4 +1,4 @@
-name: Node.js CI
+name: CI & CD
 on:
   push:
     branches:
@@ -18,13 +18,8 @@ jobs:
       - run: npm run build
       - run: npm test
       - name: Deploy
-          working-directory: ./example
-         - name: Set-up Node
-          uses: actions/setup-node@v1
-          with:
-            node-version: '10.x'
-        - run: npm install
-        - run: npm run deploy
+        - run: npm run predeploy
+        - run: npm deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.EASY_PRINT_LIBRARY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
 
