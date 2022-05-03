@@ -14,11 +14,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - run: npm install
-      - run: npm run build
+        run: |
+          npm install
+          npm run build
+          npm run test
       - name: Deploy
-        - run: npm run predeploy
-        - run: npm deploy
+        run: |
+          npm run predeploy
+          npm deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
 
