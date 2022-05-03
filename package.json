@@ -4,7 +4,7 @@
   "description": "",
   "author": "",
   "license": "MIT",
-  "repository": "/e-p",
+  "repository": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -81,6 +81,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {}
+  ]
 }
