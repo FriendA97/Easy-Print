@@ -24,4 +24,5 @@ jobs:
           build_dir: ./example/build
         env:
           GITHUB_TOKEN: ${{ secrets.EASY_PRINT_LIBRARY }}
+          GH_PAT: ${{ github.Easyprint }}
 
