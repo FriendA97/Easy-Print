@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EasyPrint, Preview } from 'e-p';
+import { EasyPrint } from 'e-p';
 import axios from 'axios';
 import {
   EASYPRINT_VARIABLEGROUP,
@@ -101,3 +101,4 @@ export default class App extends Component {
     );
   }
 }
+
