@@ -1,8 +1,7 @@
 name: CI & CD
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build-test-deploy:
@@ -14,10 +13,10 @@ jobs:
         with:
           node-version: '10.x'
       - name: Install & test & build
-          run: |
-            npm install
-            npm run build
-            npm run test
+          run:|
+          npm install
+          npm run build
+          npm run test
       - name: Deploy
         run: |
           npm run predeploy
