@@ -17,10 +17,13 @@ jobs:
           npm install
           npm run build
           npm run test
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Deploy
         run: |
           npm run predeploy
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.EASY_PRINT_LIBRARY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
