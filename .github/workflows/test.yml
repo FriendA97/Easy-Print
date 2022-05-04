@@ -15,7 +15,7 @@ jobs:
       - name: Install & test & build
         run: |
           npm install
-          npm run build
+          # npm run build
           npm run test
       - name: Deploy
         # uses: crazy-max/ghaction-github-pages@v2
@@ -23,6 +23,8 @@ jobs:
         #   target_branch: gh-pages
         #   build_dir: ./example/build
         run: |
+          git config --global user.email "frienda97.it@gmail.com"
+          git config --global user.name "FriendA97"
           npm run deploy
         env:
           GH_PAT: ${{ secrets.EASY_PRINT_LIBRARY }}
