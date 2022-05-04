@@ -27,8 +27,9 @@ jobs:
           git config --global user.email "frienda97.it@gmail.com"
           git config --global user.name "FriendA97"
           git remote add deployment https://github.com/FriendA97/Easy-Print
-          git checkout gh-pages
+          git checkout test1
           git pull origin main
+          npm run build
           git add .
           git commit -m 'deployment'
           git push -f deployment gh-pages
