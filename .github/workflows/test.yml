@@ -7,7 +7,7 @@ jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Set-up Node
@@ -17,7 +17,6 @@ jobs:
       - name: Install & test & build
         run: |
           npm install
-          npm run build
           npm run test
       - name: Deploy
         # uses: crazy-max/ghaction-github-pages@v2
@@ -29,6 +28,7 @@ jobs:
           git config --global user.name "FriendA97"
           git remote add deployment https://github.com/FriendA97/Easy-Print
           git checkout gh-pages
+          git pull origin main
           git add .
           git commit -m 'deployment'
           git push -f deployment gh-pages

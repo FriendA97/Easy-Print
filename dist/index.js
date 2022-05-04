@@ -22445,6 +22445,7 @@ i18n.use(HttpApi).init({
   }
 });
 
+//test
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Add FontAwesomeIcon to the whole app
