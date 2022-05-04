@@ -75,7 +75,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "\n.container__width {\n  max-width: 100% !important;\n  padding: 0;\n}\n\n.content__container {\n  height: 800px;\n}\n\n.margin-0{\n  margin: 0;\n}\n\n/*\n.form-group{\n  margin: 0;\n}\n\n */\n";
+var css_248z = "\r\n.container__width {\r\n  max-width: 100% !important;\r\n  padding: 0;\r\n}\r\n\r\n.content__container {\r\n  height: 800px;\r\n}\r\n\r\n.margin-0{\r\n  margin: 0;\r\n}\r\n\r\n/*\r\n.form-group{\r\n  margin: 0;\r\n}\r\n\r\n */\r\n";
 styleInject(css_248z);
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -17850,10 +17850,10 @@ var middleware = redux.applyMiddleware(logger, undoMiddleware);
 
 var store = redux.createStore(reducer$2, middleware);
 
-var css_248z$1 = ".nav__container {\n  background-color: #2d3e50;\n  width: 100%;\n  color: white;\n}\n\n.nav__splitter {\n  border-right: 2px white solid;\n}\n\n.nav__btns {\n  display: flex;\n  justify-content: space-between;\n}\n\n.nav__pageSettings {\n  display: block;\n}\n";
+var css_248z$1 = ".nav__container {\r\n  background-color: #2d3e50;\r\n  width: 100%;\r\n  color: white;\r\n}\r\n\r\n.nav__splitter {\r\n  border-right: 2px white solid;\r\n}\r\n\r\n.nav__btns {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.nav__pageSettings {\r\n  display: block;\r\n}\r\n";
 styleInject(css_248z$1);
 
-var css_248z$2 = "/* Styling the button */\n.btn__container {\n  font: inherit;\n  display: flex;\n  align-items: center;\n  width: 25%;\n  background: transparent;\n  border: none;\n  padding: 0.5rem;\n  color: inherit;\n  margin: 0 0.5rem;\n}\n\n/* Styling the navbar's buttons */\n.btn__container--navbar {\n  flex-direction: column;\n}\n\n.btn__container--navbar:active {\n  background-color: #5a6268;\n}\n\n/*Styling the toolbar's buttons */\n\n.btn__container--toolbar {\n  width: 90%;\n}\n\n.btn__container--toolbar:active,\n.btn__container--toolbar:hover {\n  background-color: #0069d9;\n}\n\n.btn__toolbar--clear,\n.btn__toolbar--clear:active,\n.btn__toolbar--clear:hover,\n.btn__toolbar--clear:focus {\n  background-color: #c82333;\n}\n\n/*Styling the icon */\n\n.icon {\n  color: #ffffff;\n  margin-bottom: 0.2rem;\n}\n\n.icon--toolbar {\n  margin-right: 1rem;\n}\n";
+var css_248z$2 = "/* Styling the button */\r\n.btn__container {\r\n  font: inherit;\r\n  display: flex;\r\n  align-items: center;\r\n  width: 25%;\r\n  background: transparent;\r\n  border: none;\r\n  padding: 0.5rem;\r\n  color: inherit;\r\n  margin: 0 0.5rem;\r\n}\r\n\r\n/* Styling the navbar's buttons */\r\n.btn__container--navbar {\r\n  flex-direction: column;\r\n}\r\n\r\n.btn__container--navbar:active {\r\n  background-color: #5a6268;\r\n}\r\n\r\n/*Styling the toolbar's buttons */\r\n\r\n.btn__container--toolbar {\r\n  width: 90%;\r\n}\r\n\r\n.btn__container--toolbar:active,\r\n.btn__container--toolbar:hover {\r\n  background-color: #0069d9;\r\n}\r\n\r\n.btn__toolbar--clear,\r\n.btn__toolbar--clear:active,\r\n.btn__toolbar--clear:hover,\r\n.btn__toolbar--clear:focus {\r\n  background-color: #c82333;\r\n}\r\n\r\n/*Styling the icon */\r\n\r\n.icon {\r\n  color: #ffffff;\r\n  margin-bottom: 0.2rem;\r\n}\r\n\r\n.icon--toolbar {\r\n  margin-right: 1rem;\r\n}\r\n";
 styleInject(css_248z$2);
 
 var IconButton = function IconButton(props) {
@@ -17925,10 +17925,10 @@ IconButton.propTypes = {
   spin: PropTypes.bool
 };
 
-var css_248z$3 = ".pageSettings__title {\n  text-align: center;\n  font-weight: 600;\n  margin-bottom: 0;\n}\n\n.pageSettings__items {\n  display: flex;\n}\n\n.pageSettings__size {\n  width: 30%;\n}\n\n.pageSettings__margin {\n  width: 50%;\n}\n\n.pageSettings__orientation {\n  display: flex;\n  flex-direction: column;\n}\n\n.pageSettings__margin > div {\n  display: flex;\n}\n";
+var css_248z$3 = ".pageSettings__title {\r\n  text-align: center;\r\n  font-weight: 600;\r\n  margin-bottom: 0;\r\n}\r\n\r\n.pageSettings__items {\r\n  display: flex;\r\n}\r\n\r\n.pageSettings__size {\r\n  width: 30%;\r\n}\r\n\r\n.pageSettings__margin {\r\n  width: 50%;\r\n}\r\n\r\n.pageSettings__orientation {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.pageSettings__margin > div {\r\n  display: flex;\r\n}\r\n";
 styleInject(css_248z$3);
 
-var css_248z$4 = ".container {\n  color: inherit;\n}\n\n.formGroup__container--horizontal {\n  display: flex;\n  justify-content: space-around;\n}\n\n.formGroup__container--text {\n  justify-content: flex-start;\n}\n\n.formGroup__input {\n  outline: none;\n  color: inherit;\n  position: static;\n  margin-left: 0;\n}\n\n.formGroup__input:active,\n.formGroup__input:hover,\n.formGroup__input:focus {\n  color: black;\n}\n\n.formGroup__input--sm {\n  width: 30%;\n  outline: none;\n  color: inherit;\n}\n\n.formGroup__input--md {\n  width: 90%;\n  outline: none;\n  color: inherit;\n}\n\n.formGroup__container--vertical {\n  display: block;\n}\n";
+var css_248z$4 = ".container {\r\n  color: inherit;\r\n}\r\n\r\n.formGroup__container--horizontal {\r\n  display: flex;\r\n  justify-content: space-around;\r\n}\r\n\r\n.formGroup__container--text {\r\n  justify-content: flex-start;\r\n}\r\n\r\n.formGroup__input {\r\n  outline: none;\r\n  color: inherit;\r\n  position: static;\r\n  margin-left: 0;\r\n}\r\n\r\n.formGroup__input:active,\r\n.formGroup__input:hover,\r\n.formGroup__input:focus {\r\n  color: black;\r\n}\r\n\r\n.formGroup__input--sm {\r\n  width: 30%;\r\n  outline: none;\r\n  color: inherit;\r\n}\r\n\r\n.formGroup__input--md {\r\n  width: 90%;\r\n  outline: none;\r\n  color: inherit;\r\n}\r\n\r\n.formGroup__container--vertical {\r\n  display: block;\r\n}\r\n";
 styleInject(css_248z$4);
 
 var customInput = function customInput(props) {
@@ -18443,7 +18443,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 var PageSettings$1 = core.withStyles(useStyles)(reactI18next.withTranslation('translations')(reactRedux.connect(mapStateToProps, mapDispatchToProps)(PageSettings)));
 
-var css_248z$5 = ".saveModal__input {\n  width: 50%;\n}\n";
+var css_248z$5 = ".saveModal__input {\r\n  width: 50%;\r\n}\r\n";
 styleInject(css_248z$5);
 
 var SaveModal = function SaveModal(props) {
@@ -18723,7 +18723,7 @@ var FinalNavbar = React.forwardRef(function finalNavbar(props, ref) {
   return React__default.createElement(ConnectedNavbar, _extends({}, props, { navbarForwardedRef: ref }));
 });
 
-var css_248z$6 = ".toolbar__container {\n  background-color: #2d3e50;\n  font-size: 1.25rem;\n  color: white;\n  height: 100%;\n  padding:  0;\n}\n\n.toolbar__items {\n  width: 90%;\n  margin: 0 auto;\n  height: 100%;\n}\n\n.toolbar__item {\n  margin: 0;\n}\n\n.toolbar__createItemTitle {\n  padding: 0 0.5rem;\n  margin: 0 0.5rem;\n  font-weight: 600;\n}\n";
+var css_248z$6 = ".toolbar__container {\r\n  background-color: #2d3e50;\r\n  font-size: 1.25rem;\r\n  color: white;\r\n  height: 100%;\r\n  padding:  0;\r\n}\r\n\r\n.toolbar__items {\r\n  width: 90%;\r\n  margin: 0 auto;\r\n  height: 100%;\r\n}\r\n\r\n.toolbar__item {\r\n  margin: 0;\r\n}\r\n\r\n.toolbar__createItemTitle {\r\n  padding: 0 0.5rem;\r\n  margin: 0 0.5rem;\r\n  font-weight: 600;\r\n}\r\n";
 styleInject(css_248z$6);
 
 var _BARCODELENGTH;
@@ -19108,13 +19108,13 @@ function mapDispatchToProps$2(dispatch) {
 
 var Toolbar$1 = reactI18next.withTranslation('translations')(styles.withStyles(icon)(reactRedux.connect(mapStateToProps$2, mapDispatchToProps$2)(Toolbar)));
 
-var css_248z$7 = ".layout__container {\n  background-color: #a9a9a9;\n  margin: 0;\n  height: 100%;\n}\n\n.labelEditor__container {\n  display: flex;\n  align-items: center;\n  margin-top: 1rem;\n}\n\n.edit__header {\n  flex-direction: column;\n  margin: 0;\n  margin-left: 1.5rem;\n}\n\n.main__container {\n  margin-left: 0;\n  margin-right: 0;\n}\n\n.main__col {\n  padding: 0;\n}\n\n.main__btns {\n  display: flex;\n}\n\n.main__edit,\n.main__view {\n  padding: 0.5rem 0;\n  margin: 1rem 0 0 0.2rem;\n}\n\n.main__view {\n  overflow: hidden;\n}\n\n.main__viewCol {\n  padding-left: 0;\n}\n\n.labelSettings__container {\n  padding-left: 0;\n}\n\n.currentItem__active {\n  min-width: 20%;\n}\n\n.currentItem__title {\n  font-weight: 700;\n}\n\n.preview__container {\n  width: 22rem;\n  height: 20rem;\n  padding: 0 1rem;\n}\n\n.m-0{\n  margin: 0 !important;\n}\n\n.ml-8{\n  margin-left: 0.5rem !important;\n}\n\n.mr-8{\n  margin-right: 0.5rem !important;\n}\n";
+var css_248z$7 = ".layout__container {\r\n  background-color: #a9a9a9;\r\n  margin: 0;\r\n  height: 100%;\r\n}\r\n\r\n.labelEditor__container {\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 1rem;\r\n}\r\n\r\n.edit__header {\r\n  flex-direction: column;\r\n  margin: 0;\r\n  margin-left: 1.5rem;\r\n}\r\n\r\n.main__container {\r\n  margin-left: 0;\r\n  margin-right: 0;\r\n}\r\n\r\n.main__col {\r\n  padding: 0;\r\n}\r\n\r\n.main__btns {\r\n  display: flex;\r\n}\r\n\r\n.main__edit,\r\n.main__view {\r\n  padding: 0.5rem 0;\r\n  margin: 1rem 0 0 0.2rem;\r\n}\r\n\r\n.main__view {\r\n  overflow: hidden;\r\n}\r\n\r\n.main__viewCol {\r\n  padding-left: 0;\r\n}\r\n\r\n.labelSettings__container {\r\n  padding-left: 0;\r\n}\r\n\r\n.currentItem__active {\r\n  min-width: 20%;\r\n}\r\n\r\n.currentItem__title {\r\n  font-weight: 700;\r\n}\r\n\r\n.preview__container {\r\n  width: 22rem;\r\n  height: 20rem;\r\n  padding: 0 1rem;\r\n}\r\n\r\n.m-0{\r\n  margin: 0 !important;\r\n}\r\n\r\n.ml-8{\r\n  margin-left: 0.5rem !important;\r\n}\r\n\r\n.mr-8{\r\n  margin-right: 0.5rem !important;\r\n}\r\n";
 styleInject(css_248z$7);
 
-var css_248z$8 = ".editProps__font {\n  width: 75%;\n}\n\n.editProp__layering--withoutFont {\n  margin: 0.5rem auto 0 auto;\n}\n\n.editProps__align {\n  text-align: center;\n  margin-bottom: 1rem;\n}\n";
+var css_248z$8 = ".editProps__font {\r\n  width: 75%;\r\n}\r\n\r\n.editProp__layering--withoutFont {\r\n  margin: 0.5rem auto 0 auto;\r\n}\r\n\r\n.editProps__align {\r\n  text-align: center;\r\n  margin-bottom: 1rem;\r\n}\r\n";
 styleInject(css_248z$8);
 
-var css_248z$9 = ".font__container {\n  color: black;\n  display: flex;\n }\n\n.font__items {\n  text-align: center;\n  margin: 1rem auto;\n  display: flex;\n}\n\n.font__item {\n  margin: 0 1rem;\n}\n\n.font__btn {\n  margin: 0 0.2rem;\n  position: relative;\n}\n\n.font__btn--active {\n  background-color: rgba(0, 0, 0, 0.08);\n  border-radius: 50%;\n}\n\n.font__icon {\n  min-width: 15px;\n  font-size: 1rem;\n}\n\n.font__toggle {\n  color: inherit;\n  background-color: white;\n}\n\n.colorPicker {\n  position: absolute;\n  top: 1rem;\n  left: 1rem;\n  z-index: 1;\n}\n\n.font__fontFamily {\n  width: 150px;\n  margin-right: 0.1rem;\n}\n\n.font__fontSize {\n  width: 80px;\n}\n";
+var css_248z$9 = ".font__container {\r\n  color: black;\r\n  display: flex;\r\n }\r\n\r\n.font__items {\r\n  text-align: center;\r\n  margin: 1rem auto;\r\n  display: flex;\r\n}\r\n\r\n.font__item {\r\n  margin: 0 1rem;\r\n}\r\n\r\n.font__btn {\r\n  margin: 0 0.2rem;\r\n  position: relative;\r\n}\r\n\r\n.font__btn--active {\r\n  background-color: rgba(0, 0, 0, 0.08);\r\n  border-radius: 50%;\r\n}\r\n\r\n.font__icon {\r\n  min-width: 15px;\r\n  font-size: 1rem;\r\n}\r\n\r\n.font__toggle {\r\n  color: inherit;\r\n  background-color: white;\r\n}\r\n\r\n.colorPicker {\r\n  position: absolute;\r\n  top: 1rem;\r\n  left: 1rem;\r\n  z-index: 1;\r\n}\r\n\r\n.font__fontFamily {\r\n  width: 150px;\r\n  margin-right: 0.1rem;\r\n}\r\n\r\n.font__fontSize {\r\n  width: 80px;\r\n}\r\n";
 styleInject(css_248z$9);
 
 var fontFamily = ['Noto Sans', 'Times New Roman', 'Arial'];
@@ -19549,7 +19549,7 @@ Alignments.propTypes = {
   moveItemBottom: PropTypes.func
 };
 
-var css_248z$a = ".editor__container {\n  /* width: 26rem; */\n  height: 7rem;\n}\n\n.editor__field {\n  background-color: white;\n}\n\n.editor__scrollbar {\n  height: calc(100vh - 120px - 10rem);\n  overflow: auto;\n}\n\n.editor__scrollbar::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: rgba(0, 0, 0, 0.1);\n  border-radius: 0.35rem;\n}\n\n.editor__scrollbar::-webkit-scrollbar {\n  width: 0.75rem;\n}\n\n.editor__scrollbar::-webkit-scrollbar-thumb {\n  background-color: white;\n  border-radius: 0.35rem;\n  border: 1px solid #cbd3da;\n}\n.editor__scrollbar::-webkit-scrollbar-corner {\n  background-color: transparent;\n}\n\n.editor__border {\n  border: 1px dashed blue;\n}\n";
+var css_248z$a = ".editor__container {\r\n  /* width: 26rem; */\r\n  height: 7rem;\r\n}\r\n\r\n.editor__field {\r\n  background-color: white;\r\n}\r\n\r\n.editor__scrollbar {\r\n  height: calc(100vh - 120px - 10rem);\r\n  overflow: auto;\r\n}\r\n\r\n.editor__scrollbar::-webkit-scrollbar-track {\r\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n  background-color: rgba(0, 0, 0, 0.1);\r\n  border-radius: 0.35rem;\r\n}\r\n\r\n.editor__scrollbar::-webkit-scrollbar {\r\n  width: 0.75rem;\r\n}\r\n\r\n.editor__scrollbar::-webkit-scrollbar-thumb {\r\n  background-color: white;\r\n  border-radius: 0.35rem;\r\n  border: 1px solid #cbd3da;\r\n}\r\n.editor__scrollbar::-webkit-scrollbar-corner {\r\n  background-color: transparent;\r\n}\r\n\r\n.editor__border {\r\n  border: 1px dashed blue;\r\n}\r\n";
 styleInject(css_248z$a);
 
 var AddTransformer = function (_React$Component) {
@@ -21075,10 +21075,13 @@ Editor.propTypes = {
  * @returns {string} The check digit, or null if invalid code
  */
 function computeGTINCheckDigit(code) {
+  var _ref;
+
   if (!/^\d{7,18}$/.test(code)) return null; //code must be digits only, 7-18 digits
 
   var digits = [].concat(toConsumableArray(String(code).padStart(18, '0')));
-  var weights = Array(9).fill([1, 3]).flat();
+  var array = Array(9).fill([1, 3]);
+  var weights = (_ref = []).concat.apply(_ref, toConsumableArray(array));
   var reducer = function reducer(accumulator, weight, i) {
     return accumulator + weight * digits[i];
   };
@@ -21305,10 +21308,10 @@ var FinalPreview = React.forwardRef(function finalPreview(props, ref) {
   return React__default.createElement(Preview, _extends({}, props, { ref: ref }));
 });
 
-var css_248z$b = ".labelItem__title {\n  font-weight: 700;\n}\n\n.labelItem__title--horizontal {\n  width: 70%;\n  font-weight: 700;\n}\n\n.labelItem__text {\n  display: flex;\n  margin: 1rem 0;\n}\n\n.labelItem__position {\n  margin-top: 1rem;\n}\n\n.labelItem__inputs {\n  display: flex;\n  margin: 1rem 0;\n}\n\n.labelItem__inputs--line {\n  width: 50%;\n}\n\n.labelItem__dropdown {\n  margin-left: 2.5rem;\n}\n\n.labelItem__toggle {\n  color: inherit;\n  background-color: white;\n}\n";
+var css_248z$b = ".labelItem__title {\r\n  font-weight: 700;\r\n}\r\n\r\n.labelItem__title--horizontal {\r\n  width: 70%;\r\n  font-weight: 700;\r\n}\r\n\r\n.labelItem__text {\r\n  display: flex;\r\n  margin: 1rem 0;\r\n}\r\n\r\n.labelItem__position {\r\n  margin-top: 1rem;\r\n}\r\n\r\n.labelItem__inputs {\r\n  display: flex;\r\n  margin: 1rem 0;\r\n}\r\n\r\n.labelItem__inputs--line {\r\n  width: 50%;\r\n}\r\n\r\n.labelItem__dropdown {\r\n  margin-left: 2.5rem;\r\n}\r\n\r\n.labelItem__toggle {\r\n  color: inherit;\r\n  background-color: white;\r\n}\r\n";
 styleInject(css_248z$b);
 
-var css_248z$c = ".typeSettings__title {\n  font-weight: 700;\n}\n\n.typeSettings__title--horizontal {\n  font-weight: 700;\n}\n\n.typeSettings__text {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n\n.typeSettings__position {\n  margin-top: 1rem;\n}\n\n.typeSettings__inputs {\n  width: 60%;\n  display: flex;\n  flex-direction: column;\n}\n\n.typeSettings__inputs--value {\n  width: 40%;\n  margin-right: 2rem;\n}\n\n.typeSettings__dropdown {\n  margin-left: 3rem;\n}\n\n.typeSettings__toggle {\n  color: inherit;\n  background-color: white;\n  padding-right: 1rem;\n  width: 100%;\n  overflow: auto;\n}\n\n.typeSettings__customText {\n  width: 50%;\n}\n\n.typeSettings__prompt {\n  width: 80%;\n}\n\n.prompt__text {\n }\n\n.typeSettings__select--inline {\n\n}\n";
+var css_248z$c = ".typeSettings__title {\r\n  font-weight: 700;\r\n}\r\n\r\n.typeSettings__title--horizontal {\r\n  font-weight: 700;\r\n}\r\n\r\n.typeSettings__text {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 80%;\r\n}\r\n\r\n.typeSettings__position {\r\n  margin-top: 1rem;\r\n}\r\n\r\n.typeSettings__inputs {\r\n  width: 60%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.typeSettings__inputs--value {\r\n  width: 40%;\r\n  margin-right: 2rem;\r\n}\r\n\r\n.typeSettings__dropdown {\r\n  margin-left: 3rem;\r\n}\r\n\r\n.typeSettings__toggle {\r\n  color: inherit;\r\n  background-color: white;\r\n  padding-right: 1rem;\r\n  width: 100%;\r\n  overflow: auto;\r\n}\r\n\r\n.typeSettings__customText {\r\n  width: 50%;\r\n}\r\n\r\n.typeSettings__prompt {\r\n  width: 80%;\r\n}\r\n\r\n.prompt__text {\r\n }\r\n\r\n.typeSettings__select--inline {\r\n\r\n}\r\n";
 styleInject(css_248z$c);
 
 var barcodes = [BARCODE_EAN8, BARCODE_EAN13, BARCODE_CODE39, BARCODE_CODE128, BARCODE_UPCA, BARCODE_GS_128];
