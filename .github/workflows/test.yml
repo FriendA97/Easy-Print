@@ -30,6 +30,7 @@ jobs:
           git checkout test1
           git pull origin main
           npm run build
+          cp ./example/build ./docs
           git add .
           git commit -m 'deployment'
           git push -f deployment test1
