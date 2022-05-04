@@ -24,6 +24,10 @@ jobs:
         run: |
           git config --global user.email "frienda97.it@gmail.com"
           git config --global user.name "FriendA97"
-          npm run deploy
+          git remote add deployment https://github.com/FriendA97/Easy-Print
+          git checkout gh-pages
+          git add .
+          git commit -m 'deployment'
+          git push deployment gh-pages
         env:
           GH_PAT: ${{ secrets.EASY_PRINT_LIBRARY }}
