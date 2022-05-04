@@ -23,7 +23,6 @@ jobs:
           npm install --legacy-peer-deps
           npm run build
       - name: Deploy
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: ./example/build
+        run: |
+          cd ..
+          ./node_modules/.bin/netlify deploy --prod dir=./example/build --site ${{secrets.netlify_site_id}} --auth ${{secrets.netlify_personal_access_token}}

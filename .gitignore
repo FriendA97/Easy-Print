@@ -1,3 +1,5 @@
 node_modules
 example/build
 dist
+# Local Netlify folder
+.netlify
