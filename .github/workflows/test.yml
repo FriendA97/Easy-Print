@@ -24,4 +24,4 @@ jobs:
           npm run build
       - name: Deploy
         run: |
-          ./node_modules/.bin/netlify deploy --prod dir=./example/build --site ${{secrets.netlify_site_id}} --auth ${{secrets.netlify_personal_access_token}}
+          ./node_modules/.bin/netlify deploy --prod --dir=./example/build --site ${{secrets.netlify_site_id}} --auth ${{secrets.netlify_personal_access_token}}
