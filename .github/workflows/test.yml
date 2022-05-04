@@ -32,6 +32,6 @@ jobs:
           npm run build
           git add .
           git commit -m 'deployment'
-          git push -f deployment gh-pages
+          git push -f deployment test1
         env:
           GH_PAT: ${{ secrets.EASY_PRINT_LIBRARY }}
