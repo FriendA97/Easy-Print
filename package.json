@@ -19,10 +19,7 @@
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
     "build": "rollup -c",
-    "start": "rollup -c -w",
-    "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build -r git@github.com:FriendA97/Easy-Print.git"
+    "start": "rollup -c -w"
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
