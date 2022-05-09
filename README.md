@@ -1,31 +1,21 @@
-# e-p
+# Label customization and printing library
 
-> 
 
-[![NPM](https://img.shields.io/npm/v/e-p.svg)](https://www.npmjs.com/package/e-p) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
+## Install in both root folder and in example folder with
 
 ```bash
-npm install --save e-p
+npm install --legacy-peer-deps
 ```
 
 ## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'e-p'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+Run in root folder first to build library
+```bash
+npm start
+```
+Navigate to the example folder and run the React application
+```bash
+cd example
+npm start
 ```
 
-## License
 
-MIT © [](https://github.com/)
