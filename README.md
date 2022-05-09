@@ -18,4 +18,6 @@ cd example
 npm start
 ```
 
+## Production link from React application for feedbacks and testing purposes
+https://easy-print.netlify.app
 
